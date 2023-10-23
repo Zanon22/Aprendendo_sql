@@ -9,7 +9,7 @@ cursor = conexao.cursor()
 
 cursor.execute("""
 UPDATE customers SET Email='felipe@embraer.com.br' WHERE Email='luisg@embraer.com.br'
-""") #executar comando sql
+""") #executar comando aulas
 
 cursor.commit() #perpetuar no banco as alterações
 
