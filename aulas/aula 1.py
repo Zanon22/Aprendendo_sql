@@ -1,6 +1,7 @@
 import pyodbc
 
-dados_conexao = ("Driver={SQLite3 ODBC Driver};Server=localhost;DataBase=salarios.sqlite;") #"UID=login;PWD=senha;"
+banco_dados = r'C:\Users\felip\PycharmProjects\aprendendosql\salarios.sqlite'
+dados_conexao = (f"Driver={'SQLite3 ODBC Driver'};Server=localhost;DataBase={banco_dados};") #"UID=login;PWD=senha;"
 
 conexao = pyodbc.connect(dados_conexao)
 
