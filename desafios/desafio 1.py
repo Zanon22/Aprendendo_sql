@@ -11,7 +11,12 @@ cursor = conexao.cursor()
 cursor.execute("SELECT * FROM Salaries")
 
 valores = cursor.fetchall()
-print(valores[:10])
+descricao = cursor.description
+colunas = [tuple[0] for tuple in descricao]
+
+tabela_clientes = pd.DataFrame.from_records(valores, columns=colunas, index="Id")
+
+print(tabela_clientes.info())
 
 cursor.close()
 conexao.close()
