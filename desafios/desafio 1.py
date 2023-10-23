@@ -7,7 +7,7 @@ conexao = pyodbc.connect(dados_conexao)
 
 cursor = conexao.cursor()
 
-cursor.execute("SELECT * FROM Salarios")
+cursor.execute("SELECT * FROM Salaries")
 
 valores = cursor.fetchall()
 print(valores[:10])
