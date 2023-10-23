@@ -16,6 +16,7 @@ colunas = [tuple[0] for tuple in descricao]
 
 tabela_clientes = pd.DataFrame.from_records(valores, columns=colunas, index="Id")
 
+print(tabela_clientes)
 print(tabela_clientes.info())
 
 cursor.close()
